@@ -1,0 +1,29 @@
+name: Import portfolio package
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  import-portfolio:
+    if: contains(github.event.head_commit.message, '[portfolio-import]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Extract completed portfolio
+        run: |
+          unzip -o portfolio.zip
+          rm portfolio.zip
+
+      - name: Commit published case studies
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish completed data analysis case studies"
+          git push
