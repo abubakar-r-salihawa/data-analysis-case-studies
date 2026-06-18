@@ -1,31 +1,67 @@
 # Data Analysis Case Studies
 
-Welcome to my data analysis case studies repository. This collection contains polished case studies that showcase my ability to clean data, analyse patterns, build predictive models and communicate findings clearly.
+A portfolio collection by **Abubakar Rabiu Salihawa** demonstrating practical data cleaning, exploratory analysis, predictive modelling and clear communication of results.
 
-## Projects
+## Case studies
 
-### Car Price Analysis
-This case study investigates how vehicle specifications influence price. Starting from a raw automobile dataset, I performed data cleaning and explored relationships between features such as horsepower, engine size, curb weight and fuel type. I built multiple regression models (linear, polynomial) with appropriate train/test splits to predict prices and evaluated performance using MAE, RMSE and R². The analysis highlights which features are most correlated with price and provides practical insights into used-car valuations.
+### [Car Price Analysis](car-price-analysis/)
 
-### Laptop Price Analysis
-This study examines what drives laptop prices. After cleaning the dataset and engineering relevant features (e.g. processor brand, storage type, screen size), I compared multiple regression models to predict prices and assessed their accuracy. A final model was selected based on cross‑validation results and interpretability. Key findings reveal the strongest predictors and market trends.
+Analyses 201 vehicle records to identify the specifications most associated with price and compares linear, ridge, polynomial and random-forest regression models. The random forest achieved approximately **0.94 test R²**.
 
-## Repository Structure
+![Car model comparison](car-price-analysis/images/model_comparison.svg)
 
+### [Laptop Price Analysis](laptop-price-analysis/)
+
+Analyses 238 laptop records, explores hardware and manufacturer price relationships, and compares linear, ridge, random-forest and gradient-boosting models. Gradient boosting achieved approximately **0.48 test R²**.
+
+![Laptop feature importance](laptop-price-analysis/images/feature_importance.svg)
+
+## Skills demonstrated
+
+- Python, pandas and NumPy
+- Data validation and missing-value handling
+- Exploratory data analysis and visualisation
+- Feature preparation and categorical encoding
+- Train/test evaluation using MAE, RMSE and R²
+- Linear, regularised, polynomial and ensemble regression
+- Reproducible Jupyter notebooks and written conclusions
+
+## Run locally
+
+```bash
+git clone https://github.com/abubakar-r-salihawa/data-analysis-case-studies.git
+cd data-analysis-case-studies
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook
 ```
+
+## Repository structure
+
+```text
 data-analysis-case-studies/
-├─ car-price-analysis/
-│   ├─ car_price_analysis.ipynb    # Polished notebook with data cleaning, EDA, modelling and conclusions
-│   └─ README.md                  # Description of the case study
-├─ laptop-price-analysis/
-│   ├─ laptop_price_analysis.ipynb
-│   └─ README.md
-├─ requirements.txt               # Dependencies for running the notebooks
-├─ ATTRIBUTION.md                 # Credits to original course materials
-├─ LICENSE                        # Project license (MIT)
-└─ README.md                      # This file
+├── car-price-analysis/
+│   ├── data/usedcars.csv
+│   ├── images/
+│   ├── car_price_analysis.ipynb
+│   ├── car_price_analysis.html
+│   └── README.md
+├── laptop-price-analysis/
+│   ├── data/laptops.csv
+│   ├── images/
+│   ├── laptop_price_analysis.ipynb
+│   ├── laptop_price_analysis.html
+│   └── README.md
+├── ATTRIBUTION.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── SECURITY.md
+└── requirements.txt
 ```
 
-## Credits
+## Attribution
 
-These projects were developed as part of my learning journey through IBM's Data Analysis with Python programme. The original laboratory datasets and exercises are credited to IBM Skills Network. I have reorganised, extended and polished the analyses to create standalone portfolio projects.
+These projects originated from learning activities associated with IBM Data Analysis with Python. The analysis has been restructured, corrected, extended and documented as independent portfolio work. See [ATTRIBUTION.md](ATTRIBUTION.md).
