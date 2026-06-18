@@ -20,7 +20,7 @@ jobs:
       - name: Extract completed portfolio
         run: |
           unzip -o portfolio.zip
-          rm portfolio.zip
+          rm -f portfolio.zip .portfolio-import-trigger
 
       - name: Commit published case studies
         run: |
