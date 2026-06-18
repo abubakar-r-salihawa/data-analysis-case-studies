@@ -17,10 +17,12 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Extract completed portfolio
+      - name: Rebuild and extract portfolio package
         run: |
+          cat .portfolio-parts/part-*.txt > portfolio.b64
+          base64 --decode portfolio.b64 > portfolio.zip
           unzip -o portfolio.zip
-          rm -f portfolio.zip .portfolio-import-trigger
+          rm -rf .portfolio-parts .portfolio-import-trigger portfolio.b64 portfolio.zip
 
       - name: Commit published case studies
         run: |
