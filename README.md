@@ -6,54 +6,49 @@ A portfolio collection by **Abubakar Rabiu Salihawa** demonstrating practical da
 
 ### [Car Price Analysis](car-price-analysis/)
 
-Analyses 201 vehicle records to identify the specifications most associated with price and compares linear, ridge, polynomial and random-forest regression models. The random forest achieved approximately **0.94 test R²** with an RMSE of approximately **2,800 price units**.
+Analyses 201 vehicle records to identify the specifications most associated with price. The notebook explores the data and evaluates a random-forest regression model on held-out records.
+
+**Validated result:** approximately **0.94 test R²** and **2,800 RMSE**.
 
 ### [Laptop Price Analysis](laptop-price-analysis/)
 
-Analyses 238 laptop records, explores hardware and manufacturer price relationships, and compares linear, ridge, random-forest and gradient-boosting models. Gradient boosting achieved approximately **0.48 test R²** with an RMSE of approximately **347 price units**.
+Analyses 238 laptop records and investigates how hardware characteristics relate to price using gradient-boosting regression.
+
+**Validated result:** approximately **0.48 test R²** and **347 RMSE**.
 
 ## Skills demonstrated
 
-- Python, pandas and NumPy
+- Python, pandas and Matplotlib
 - Data validation and missing-value handling
-- Exploratory data analysis and visualisation
-- Feature preparation and categorical encoding
+- Exploratory data analysis
+- Feature selection and regression modelling
 - Train/test evaluation using MAE, RMSE and R²
-- Linear, regularised, polynomial and ensemble regression
-- Reproducible Jupyter notebooks and written conclusions
-
-## Run locally
-
-```bash
-git clone https://github.com/abubakar-r-salihawa/data-analysis-case-studies.git
-cd data-analysis-case-studies
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-jupyter notebook
-```
+- Reproducible Jupyter notebooks
+- Clear reporting of findings and limitations
 
 ## Repository structure
 
 ```text
 data-analysis-case-studies/
 ├── car-price-analysis/
-│   ├── data/usedcars.csv
 │   ├── car_price_analysis.ipynb
 │   └── README.md
 ├── laptop-price-analysis/
-│   ├── data/laptops.csv
 │   ├── laptop_price_analysis.ipynb
 │   └── README.md
-├── ATTRIBUTION.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── SECURITY.md
-└── requirements.txt
+└── ATTRIBUTION.md
 ```
+
+The notebooks download their source datasets from the IBM Skills Network data repository when executed.
+
+## Run the projects
+
+1. Clone or download this repository.
+2. Open the selected `.ipynb` file in Jupyter Notebook, JupyterLab, VS Code or Google Colab.
+3. Run the cells from top to bottom.
+
+Required Python packages: `pandas`, `matplotlib` and `scikit-learn`.
 
 ## Attribution
 
-These projects originated from learning activities associated with IBM Data Analysis with Python. The analysis has been restructured, corrected, extended and documented as independent portfolio work. See [ATTRIBUTION.md](ATTRIBUTION.md).
+These projects originated from learning activities associated with IBM Data Analysis with Python. The workflows were restructured, corrected, extended and documented as portfolio projects. See [ATTRIBUTION.md](ATTRIBUTION.md).
